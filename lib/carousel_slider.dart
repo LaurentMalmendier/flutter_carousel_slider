@@ -16,6 +16,7 @@ export 'carousel_options.dart';
 
 typedef Widget ExtendedIndexedWidgetBuilder(
     BuildContext context, int index, int realIndex);
+typedef OnPageController = void Function();
 
 class CarouselSlider extends StatefulWidget {
   /// [CarouselOptions] to create a [CarouselState] with
@@ -33,6 +34,8 @@ class CarouselSlider extends StatefulWidget {
 
   /// A [MapController], used to control the map.
   final CarouselControllerImpl _carouselController;
+
+  final OnPageController listener;
 
   final int itemCount;
 
@@ -117,6 +120,7 @@ class CarouselSliderState extends State<CarouselSlider>
       viewportFraction: options.viewportFraction,
       initialPage: carouselState.realPage,
     );
+    widget.listener?.call();
 
     carouselState.pageController = pageController;
   }
