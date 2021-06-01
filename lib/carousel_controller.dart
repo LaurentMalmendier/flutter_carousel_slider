@@ -94,7 +94,7 @@ class CarouselControllerImpl implements CarouselController {
 
     _setModeController();
     final int pageToJump = state.pageController.page.toInt() + page - index;
-    return _tate.pageController.jumpToPage(pageToJump);
+    return state.pageController.jumpToPage(pageToJump);
   }
 
   /// Animates the controlled [CarouselSlider] from the current page to the given page.
