@@ -57,7 +57,7 @@ class CarouselSlider extends StatefulWidget {
       @required this.itemBuilder,
       @required this.options,
       carouselController,
-      pageListener
+      pageListener,
       Key key})
       : items = null,
         _carouselController = carouselController ?? CarouselController(),
