@@ -29,7 +29,8 @@ abstract class CarouselController {
 class CarouselControllerImpl implements CarouselController {
   final Completer<Null> _readyCompleter = Completer<Null>();
 
-  CarouselState _state;
+//LaurentM
+  CarouselState state;
 
   set state(CarouselState state) {
     _state = state;
