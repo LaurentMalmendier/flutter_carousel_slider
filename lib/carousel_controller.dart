@@ -31,7 +31,7 @@ class CarouselControllerImpl implements CarouselController {
 
   CarouselState _state;
 
-  get state () {
+  get state {
     return _state;
   }
 
